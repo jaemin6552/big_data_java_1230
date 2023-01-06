@@ -9,6 +9,7 @@ public class MemberMail {
         info.setJobs(); //
 
         info.viewInfo();
+
     }
 }
 
