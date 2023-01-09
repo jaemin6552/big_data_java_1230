@@ -10,27 +10,25 @@ import java.util.Scanner;
 //총 세트 메뉴의 금액 구하는 문제
 public class SetMenu {
     public static void main(String[] args) {
-        int []setMenue = new int[5];
+        int []setMenu = new int[5];
         Scanner sc = new Scanner(System.in);
 
-        for(int i = 0; i<setMenue.length; i++)
+        for(int i = 0; i<setMenu.length; i++)
         {
             System.out.println("가격을 입력하시오 : ");
-            setMenue[i] = sc.nextInt();
+            setMenu[i] = sc.nextInt();
         }
-        int Hmin = setMenue[0];
-        int Wmin = setMenue[3];
-        for (int i = 0; i<setMenue.length-2; i++){
-            if(setMenue[i] <Hmin ) Hmin = setMenue[i];
+        int minH = setMenu[0];
+        int minD = setMenu[3];
+        for (int i = 0; i<setMenu.length-2; i++){
+            if(setMenu[i] <minH ) minH = setMenu[i];
+            if(setMenu[i+1] > setMenu[i+2]) {
+                minD = setMenu[i + 2];
+            } else minD = setMenu[i + 1];
 
-            if(setMenue[i+1] > setMenue[i+2]) {
-                Wmin = setMenue[i + 2];
-            }
-            else {
-                Wmin = setMenue[i+1];
-            }
+
         }
-        System.out.println("최소값 : " + (Wmin+Hmin-50));
+        System.out.println("최소값 : " + (minD+minH-50));
 
     }
 
