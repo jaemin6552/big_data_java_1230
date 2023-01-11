@@ -13,8 +13,11 @@ public class ClassMethod {
         int n1 = sc.nextInt();
         int n2 = sc.nextInt();
         System.out.println(sample.sum(n1,n2)); // sum()은 매개변수와 반환값이 있는 메소드
-        sample.say();
+        sample.say(); //say()메소드를 호출하기 위해서는 클래스를 객체로 만들고 객체의 메소드로 접근
         System.out.println(sample.sayStr());
+
+        int rst2 = sample.sum(1,2,3,4,5);
+        System.out.println(rst2);
     }
 }
 
