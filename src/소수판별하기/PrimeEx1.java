@@ -1,7 +1,10 @@
 package 소수판별하기;
 // 소수란 : 1과 자기자신 이외에는 나누어 지지 않는 수
-// 소수 판별하기 :
-
+// 소수 판별하기 : OK
+// 소수의 합 구하기 : 정수 값을 입력 받아, 입력 받은 정수값 미만의 소수의 합을 구하는 문제
+// 정수 입력 : 12
+// 결과 : 2 + 3 + 5 + 7 + 11 = 28;
+// 문제를 푸는 방법 : 메소드를 호출 시 정수 값을 입력해서 해당 정수가 소수이면 그 값을 반환
 import java.util.Scanner;
 
 public class PrimeEx1 {
@@ -9,20 +12,22 @@ public class PrimeEx1 {
         Scanner sc = new Scanner(System.in);
         System.out.println("정수 입력 : ");
         int number = sc.nextInt();
-        boolean rst = isPrime(number);
-        System.out.println("입력된 수 : " + number);
-        System.out.println("소수 여부 : " + rst);
+        int sum = 0;
+        for(int i = 2; i<= number; i++) {
+            sum += primeSum(i);
+        }
+        System.out.println("소수의 합 : " + sum);
     }
 
-    static boolean isPrime(int n){ //static이붙으면 객체소속이아닌 메소드가됨
+    static int primeSum(int n) { //static이붙으면 객체소속이아닌 메소드가됨
         //1과 입력 받은 값을 제외, 즉 2 ~ 입력 받은 값 미만
-        for(int i = 2; i < n; i++) {
-            if ((n % i) == 0) {
-                return false; //전달받은 수를 1과 자신을 제외하고 나누어지는 경우를 의미
-            }
+        int tmp = 0;
+        boolean isPrime = true;
+        for (int i = 2; i < n; i++) {
+            if ((n % i) == 0) isPrime = false;
         }
-        if(n ==1) return false;
-
-        return true;
+        if(isPrime) return n;
+        else return 0;
     }
 }
+

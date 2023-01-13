@@ -23,6 +23,8 @@ public class StringType {
         System.out.println(Language.replaceAll("Kotlin", "Jet Brain"));
         System.out.println(Language.replaceAll(" Kotlin,",""));
         Language.replace("K","");
+
+
         //substring : 문자열에서 특정 문자열 을 뽑아 낼 때 사용
         //String e = "Hello Java";
         System.out.println(e.substring(6)); //시작 인덱스 부터 끝까지 추출
@@ -31,7 +33,7 @@ public class StringType {
         System.out.println(e.toUpperCase());
         System.out.println(e.toLowerCase());
         //trim : 문자열의 앞과 뒤에 있는 공백 제거
-        String str =" 자바 프로그래밍   !!!!!!!";
+        String str =" 자바 프로그래밍   !!!!!!!        ";
         System.out.println(str.trim());
         //문자열 포매팅이란? 문자열에 특정 문자를 삽입하는 방법 (삽입을 위해서는 서식이 필요)
         System.out.printf("자바 프로그램을 %s 합시다.\n","열심히");
@@ -49,5 +51,7 @@ public class StringType {
         char[] arrName =name.toCharArray(); //문자열을 문자로 구성된 배열로 만듬
         System.out.println(name);
         System.out.println(arrName);
+        char[] num1 = {'1','2','3'};
+        System.out.println(num1);
     }
 }
