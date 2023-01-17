@@ -14,6 +14,8 @@ public class Bank {
     public static int getCount() { //정적 필드값을 읽기 위한 정적 메소드 (클래스 소속)
         return count;
     }
+
+
     //예금을 위한 메소드 작성
     public void setDeposit(final int dep){ //입금된 고객의 금액을 더 이상 변경 불가 상태로 만들어 안전하게 보호 함.
         this.account += dep;

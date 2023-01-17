@@ -2,6 +2,7 @@ package 정적메소드;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.lang.*;
 
 public class Util {
     public static String getCurrentDate(String fmt){
