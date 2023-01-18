@@ -12,22 +12,22 @@ public class AverGet {
         count = sc.nextInt();
         for(int i = 0; i<count; i++){
             int sum =0;
-            int isAvg = 0;
+            double isAvg = 0;
             System.out.print("학생수 입력 : ");
             student = sc.nextInt();
             int []score = new int[student];
 
             for(int j = 0; j<score.length; j++){
-                System.out.print("점수 입력: ");
+                System.out.printf("점수 입력: \r");
                 score[j] = sc.nextInt();
                 sum += score[j];
         }
-            for(int k = 0; k <score.length; k++){
-                if((double)sum / score.length < score[k]){
+            for(int e : score){
+                if((double)sum / score.length < e){
                     isAvg++;
                 }
             }
-            System.out.printf("%.3f%%\n", ((double)isAvg / student) * 100 );
+            System.out.printf("%.3f%%\n", isAvg / student * 100 );
         }
     }
 }

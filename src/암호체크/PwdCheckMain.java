@@ -15,7 +15,7 @@ public class PwdCheckMain {
         boolean isLower = false;
         boolean isUpper = false;
         boolean isSp = false;
-        String special = "!,%,_,#,&,+,-,*,/";
+        String special = "!%_#&+-*/";
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.print("암호입력 : ");
@@ -23,19 +23,8 @@ public class PwdCheckMain {
             if (password.equalsIgnoreCase("종료") || password.equalsIgnoreCase("exit")) break;
             if (password.length() >= 10 && password.length() <= 30) {
                 for (int i = 0; i < password.length(); i++) {
-                    switch (password.charAt(i)) {
-                        //문자 구분 케이스
-                        case 33:
-                        case 35:
-                        case 37:
-                        case 38:
-                        case 42:
-                        case 43:
-                        case 45:
-                        case 47:
-                        case 95:
-                            isSp = true;
-                            break;
+                    for(int j = 0; j < special.length(); j++){
+                        if(password.charAt(i) == special.charAt(j)) isSp = true;
                     }
                     //숫자 구분 케이스
                     if (password.charAt(i) >= 48 && password.charAt(i) <= 57) isNum = true;
@@ -46,6 +35,7 @@ public class PwdCheckMain {
                 }
             } else {
                 System.out.println("잘못 입력하셨습니다.");
+                continue;
             }
             if (isNum && isUpper && isLower && isSp) {
                 System.out.println("Good password");
@@ -59,11 +49,6 @@ public class PwdCheckMain {
         }
 
     }
-    private void a(int b, int c){
 
-    }
-    public void a(int b){
-
-    }
 
 }
