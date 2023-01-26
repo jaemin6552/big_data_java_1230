@@ -4,6 +4,7 @@ public class NestedMain {
     public static void main(String[] args) {
         OutClass outClass =new OutClass();
         outClass.usingClass();
-        OutClass.InClass.inTest();
+       //OutClass.InClass.
+
     }
 }

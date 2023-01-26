@@ -14,3 +14,4 @@ public class Button {
         void onClick();//추상메소드 : 상속 받은 클래스에서 해당 기능을 반드시 오버라이딩 해야 함
     }
 }
+
