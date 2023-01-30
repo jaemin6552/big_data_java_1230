@@ -15,4 +15,5 @@ class Person <T>{
     Person(T info) {
         this.info = info;
     }
+    
 }
