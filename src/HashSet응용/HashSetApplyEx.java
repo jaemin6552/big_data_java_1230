@@ -23,6 +23,7 @@ public class HashSetApplyEx {
         // HashSet 을 이용해 중복 제거
         HashSet<String>hashSet =new HashSet<>(Arrays.asList(Alpabet));
         Alpabet = hashSet.toArray(new String[0]); //배열의 크기를 0으로 지정하면 자동으로 배열 크기가 지정됨
+
         Arrays.sort(Alpabet, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {

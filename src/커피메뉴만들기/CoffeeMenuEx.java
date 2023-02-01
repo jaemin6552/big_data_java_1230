@@ -14,9 +14,12 @@ public class CoffeeMenuEx {
         coffee.selectMenu();
     }
     void makeMenu(){
-        hashMap.put("Americano", new MenuInfo("Americano", 2500,"Coffee", "기본커피입니다."));
+        hashMap.put("Americano", new MenuInfo("Americano", 9000,"Coffee", "기본커피입니다."));
         hashMap.put("Latte", new MenuInfo("Latte", 1500,"Coffee", "우유커피입니다."));
-        hashMap.put("Espresso", new MenuInfo("Espresso", 3000,"Coffee", "찐한커피입니다."));
+        hashMap.put("q", new MenuInfo("a", 4000,"Coffee", "찐한커피입니다."));
+        hashMap.put("j", new MenuInfo("b", 7300,"Coffee", "기본커피입니다."));
+        hashMap.put("k", new MenuInfo("c", 8200,"Coffee", "우유커피입니다."));
+        hashMap.put("d", new MenuInfo("d", 5000,"Coffee", "찐한커피입니다."));
 
     }
     void selectMenu(){

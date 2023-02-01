@@ -17,6 +17,6 @@ public class MenuInfo implements Comparable<MenuInfo> {
 
     @Override
     public int compareTo(MenuInfo o) {
-        return this.price - o.price;
+        return  this.compareTo(o);
     }
 }
