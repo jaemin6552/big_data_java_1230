@@ -17,6 +17,9 @@ package 클래스정렬연습문제;
 //   1    99   안유진 202301
 
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.TreeSet;
 import static 클래스정렬연습문제.StudentInfo.rank;
 public class ClassSortEx1 {
@@ -34,6 +37,8 @@ public class ClassSortEx1 {
         for(StudentInfo e : stInfo) {
             System.out.printf("%d%5d%7s%10d\n",(rank++),e.score,e.name,e.number);
         }
+
+
 
     }
 }
