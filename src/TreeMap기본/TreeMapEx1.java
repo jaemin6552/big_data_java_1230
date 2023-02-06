@@ -15,6 +15,7 @@ public class TreeMapEx1 {
         score.put(98,"우영우");
 
         Map.Entry<Integer, String> entry = null;
+
         entry = score.firstEntry();
         System.out.println("가장 낮은 점수 : " + entry.getKey() + " : " + entry.getValue());
         entry = score.lastEntry();

@@ -11,8 +11,8 @@ public class Conversion {
         num.push(sc.nextInt());
 
         for(int i =0; i< num.size(); i++){
-            int tmp = num.pop();
-                 answer.add(tmp^0);
+            int tmp = num.pop() | 1;
+                 answer.add(tmp);
             }
         for(Integer e : answer){
             System.out.println(e);

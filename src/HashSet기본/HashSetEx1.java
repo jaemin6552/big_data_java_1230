@@ -23,7 +23,7 @@ public class HashSetEx1 {
 }
 
 class Member {
-    int id;
+    Integer id;
     String name;
     @Override
     public int hashCode() {
@@ -33,7 +33,7 @@ class Member {
     public boolean equals(Object obj){
         if(obj instanceof Member){
             Member member = (Member) obj;
-            if(this.id == member.id) return true;
+            if(id.hashCode() == member.hashCode()) return true;
             else return false;
         }
         return false;
