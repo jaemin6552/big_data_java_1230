@@ -28,6 +28,7 @@ class EvenException extends Exception {
         }
         else return Integer.toString(number) + "는 짝수가 아닙니다.";
     }
+
 }
 class CheckEven{
     private int num;

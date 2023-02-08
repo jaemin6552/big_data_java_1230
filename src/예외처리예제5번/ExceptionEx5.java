@@ -10,7 +10,7 @@ public class ExceptionEx5 {
     public static void main(String[] args) {
         FileWriter f = null;
         try{
-            f = new FileWriter("test.txt");
+            f = new FileWriter("testdtxt");
             f.write("test");
         }catch (IOException e){
             e.printStackTrace();
