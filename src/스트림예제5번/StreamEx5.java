@@ -29,13 +29,13 @@ public class StreamEx5 {
         //stream2.distinct().forEach(System.out::println);
 
         // 스트림 변환(map()) : 해당 스트림의 요소들에 주어진 함수의 인수로 전달하여, 그 반환 값으로 이루어진 새로운 스트림 생성
-        Stream<String> stream = Stream.of("HTML","CSS","JAVA","JAVASCRIPT");
-        stream.map(e->e.length()).forEach(System.out::println);
-
-        //flatMap() : 이거안쓰면 안쪼개짐 split으로도
-        String []arr = {"I study hard","You study JAVA","I am hungry"};
-        Stream<String> stream1 = Arrays.stream(arr);
-        stream1.flatMap(s->Stream.of(s.split(" "))).forEach(System.out::println);
+//        Stream<String> stream = Stream.of("HTML","CSS","JAVA","JAVASCRIPT");
+//        stream.map(e->e.length()).forEach(System.out::println);
+//
+//        //flatMap() : 이거안쓰면 안쪼개짐 split으로도
+//        String []arr = {"I study hard","You study JAVA","I am hungry"};
+//        Stream<String> stream1 = Arrays.stream(arr);
+//        stream1.flatMap(s->Stream.of(s.split(" "))).forEach(System.out::println);
 
         // 스트림 제한
         // limit() : 해당 스트림의 첫 번째 요소부터 전달된 개수 만큼의 요소로만 이루어진 새로운 스트림 반환

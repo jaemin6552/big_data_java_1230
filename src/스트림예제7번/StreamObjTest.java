@@ -1,0 +1,51 @@
+package 스트림예제7번;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StreamObjTest {
+    public static void main(String[] args) {
+        List<TravelCustomer> customerList = new ArrayList<>();
+        customerList.add(new TravelCustomer("유나",21,1000));
+        customerList.add(new TravelCustomer("남행선",38,3000));
+        customerList.add(new TravelCustomer("Gandalf",300,10000));
+        customerList.add(new TravelCustomer("frodo",60,1500));
+        System.out.println("고객 명단 출력");
+        customerList.stream().map(c->c.getName()).forEach(System.out::println);
+        int total = customerList.stream().mapToInt(c->c.getPrice()).sum();
+        System.out.println("총 여행 비용 : " + total);
+
+        System.out.println("20세 이상 성인 출력");
+        customerList.stream().filter(c -> c.getAge() >= 20).map(c->c.getName()).sorted().forEach(System.out::println);
+
+    }
+    public static void printData(List<?> list) {
+        for (Object obj : list) {
+            System.out.println(obj);
+        }
+    }
+}
+class TravelCustomer {
+    String name;
+    int age;
+    int price;
+
+    public TravelCustomer(String name, int age, int price) {
+        this.name = name;
+        this.age = age;
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+}
