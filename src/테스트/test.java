@@ -4,25 +4,33 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class test {
-    public static void main(String[] args) {
-        ArrayList<Member> arrayList = new ArrayList<>();
-        arrayList.add(new Member(30,"jm"));
-        arrayList.add(new Member(50,"jm"));
-        arrayList.add(new Member(70,"jm"));
-
-        for(Member e : arrayList){
-            System.out.println(e.id + " " + e.name);
-
-        }
-    }
+class Box<T> {
+    private T ob;
+    public void set(T o) { ob = o; }
+    public T get() { return ob; }
 }
-class Member {
-    int id;
-    String name;
 
-    public Member(int id, String name) {
-        this.id = id;
-        this.name = name;
+class test {
+    public static <T>  boolean compBox(Box<? extends T> box, T con) {
+        T bc = box.get();
+        //box.set(con);
+        return bc.equals(con);
+    }
+
+    public static void main(String[] args) {
+        Box<Integer> box1 = new Box<>();
+        box1.set(24);
+
+        Box<String> box2 = new Box<>();
+        box2.set("Poly");
+
+        if(compBox(box1, 25))
+            System.out.println("���� �ȿ� 25 ����");
+
+        if(compBox(box2, "Moly"))
+            System.out.println("���� �ȿ� Moly ����");
+
+        System.out.println(box1.get());
+        System.out.println(box2.get());
     }
 }

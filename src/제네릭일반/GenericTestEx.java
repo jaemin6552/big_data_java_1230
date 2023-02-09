@@ -15,8 +15,10 @@ public class GenericTestEx {
         // List에서 사용할 데이터 타입을 미리 지정함으로 컴파일 시 타입체크가 일어 나도록 함
         List<String> list = new ArrayList<>();
         list.add("hello");
-        String str = list.get(0); //0번째 리스트 값을 가져옴
-        System.out.println(str);
+        list.add("JM");
+        String str = list.get(1); //0번째 리스트 값을 가져옴
+
+        System.out.println(list.get(0));
 
     }
 }

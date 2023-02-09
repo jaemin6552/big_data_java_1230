@@ -9,18 +9,17 @@ public class VigenereCipher {
         String secret = "love";
         System.out.print("평문 입력: ");
         String normal = sc.nextLine();
-        int add;
+
         char []answer = new char[normal.length()];
 
         for(int i = 0 ; i<normal.length(); i++) {
-            add = secret.charAt(i % 4) - 96;
-            if(normal.charAt(i) - add >= 'a') {
-                answer[i] = (char) (normal.charAt(i) - add);
-            }else if(normal.charAt(i) == ' ') {
+            answer[i] = (char)(normal.charAt(i)-(secret.charAt(i % 4) - 96));
+            if(normal.charAt(i) == ' ') {
                 answer[i] = ' ';
-            }
-            else {
-                answer[i] = (char) (normal.charAt(i)-add + 26);
+            } else {
+                if (answer[i] < 'a') {
+                    answer[i] += 26;
+                }
             }
         }
         System.out.println(Arrays.toString(answer));

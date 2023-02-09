@@ -1,23 +1,25 @@
 package 중첩클래스2;
 
 public class OutClass {
-    private int num = 10; //인스턴스 변수
-    private static int sNum = 20; //정적 변수(클래스 소속의 변수)
-    InClass inClass; // 아직 내부 클래스를 만들지않았음
-    public OutClass() { //외부 클래스에 대한 생성자 호출
+    private int num = 10;
+    private static int sNum = 20;
+
+    private InClass inClass;
+
+    public OutClass() {
         inClass = new InClass();
     }
-    class InClass {
+
+    class InClass{
         int inNum = 100;
-
-        //static int sInNum = 200; // JDK 11버전 기준으로는 내부 클래스에 정적변수를 선언 할 수 없음
-         public void inTest() {
-            System.out.println("외부클래스 인스턴스 변수" + num);
-            System.out.println("외부클래스 정적 변수 " + sNum);
+        // static int cInNum = 200; // 인스턴스 내부 클래스에 정적 변수 선언 불가능
+        void inTest() {
+            System.out.println("외부 클래스의 인스턴스 변수 : " + num);
+            System.out.println("외부 클래스의 정벅 변수 : " + sNum);
         }
+        // static void sTest() {} // 인스턴스 내부 클래스에 정적 메소드 정의 불가능
     }
-        public void usingClass() {
-            inClass.inTest();
-        }
+    public void usingClass() {
+        inClass.inTest();
+    }
 }
-

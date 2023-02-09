@@ -10,13 +10,21 @@ public class NestedMain {
         A a = new A(); //먼저 외부 클래스를 생성한 후 내부 클래스 생성 해야 함.
         A.B b = a.new B();
         b.testMethod();
+        a.useBMethod();
     }
 }
 
 class A {
+    B b;
+    public A(){
+        b = new B();
+    }
     class B {
         void testMethod(){
             System.out.println("중첩 클래스의 메소드 입니다.");
         }
+    }
+    public void useBMethod(){
+        b.testMethod();
     }
 }

@@ -8,6 +8,8 @@ public class SingletonMain {
         ReferenceTest1 ref1 = new ReferenceTest1();
         ReferenceText2 ref2 = new ReferenceText2();
         ref1.setInfo("JM",28);
+        ref2.setInfo("gandalf",300);
+        ref1.viewInfo();
         ref2.viewInfo();
     }
 }

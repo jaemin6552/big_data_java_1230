@@ -18,10 +18,10 @@ public class PcRoomEx {
         System.out.print("손님 수 입력: ");
         int people = sc.nextInt();
         for(int i =0; i < people; i++){
-            System.out.print("손님이 원하는 자리: ");
+            System.out.printf("손님이 원하는 자리: \r");
             int want = sc.nextInt();
             if(seat[want-1] == true){
-               // count ++;
+                count ++;
             }else {
                 seat[want-1] = true;
             }

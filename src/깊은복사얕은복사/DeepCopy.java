@@ -12,7 +12,7 @@ public class DeepCopy {
         int[] arr2 = new int[7]; //얕은 복사가 일어 남
         int[] arr3 = Arrays.copyOf(arr1,arr1.length);
         System.arraycopy(arr1,0,arr2,0,arr1.length);
-        //arr2 = Arrays.copyOf(arr1,0);
+        arr2 = Arrays.copyOf(arr1,arr1.length);
         System.out.println(Arrays.toString(arr3));
         System.out.println(Arrays.toString(arr1));
         System.out.println(Arrays.toString(arr2));

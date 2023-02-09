@@ -10,7 +10,8 @@ public class InOutStreamEx3 {
     public static void main(String[] args) throws IOException {
         Writer writer = new FileWriter("test.txt");
         //char[] data = "재미 없어 어쩌지~".toCharArray();
-        String data = "재미 있습니다~";
+        String data = "재미 있습니다~,\n"+
+                "유후";
 //        for(int i = 0; i < data.length; i++){
 //            writer.write(data[i]);
 //        }

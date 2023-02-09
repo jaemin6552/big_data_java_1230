@@ -12,6 +12,8 @@ import java.util.Arrays;
 public class StringBufferMain {
     public static void main(String[] args) {
         StringBuilder sb = new StringBuilder();
+        StringBuffer sf = new StringBuffer();
+
         sb.append("hello");
         sb.append(' ');
         sb.append("Python");

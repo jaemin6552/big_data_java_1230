@@ -14,6 +14,7 @@ public class ArraysTestEx {
     public static void main(String[] args) {
         Integer[] arr = {5, 3, 4, 1, 2, 345, 777, 657, 235};
         Arrays.sort(arr); //오름 차순 정렬
+        Arrays.sort(arr,Comparator.naturalOrder());
         System.out.println(Arrays.toString(arr));
         Arrays.sort(arr, new Comparator<Integer>() {
                     @Override
