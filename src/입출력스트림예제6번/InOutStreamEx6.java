@@ -20,7 +20,7 @@ public class InOutStreamEx6 {
             System.out.println(line);
         }
 
-        sc.close();
+        inputStream.close();
 
     }
 }
