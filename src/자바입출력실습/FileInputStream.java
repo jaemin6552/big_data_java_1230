@@ -6,7 +6,7 @@ import java.util.*;
 
 public class FileInputStream {
     private TreeSet<StudentInfo> treeSet = new TreeSet<>();
-    private StudentInfo studentInfo;
+
    public void inPutStream( String fName) throws IOException {
        java.io.FileInputStream inputStream = null;
 
@@ -19,10 +19,9 @@ public class FileInputStream {
        while(sc.hasNextLine()){
            String line = sc.nextLine();
            List<String> list = new ArrayList<>(Arrays.asList(line.split(" ")));
-           studentInfo = new StudentInfo();
-           studentInfo.setName(list.get(0));
-           studentInfo.setSum(Integer.parseInt(list.get(1)),Integer.parseInt(list.get(2)),Integer.parseInt(list.get(3)));
-           this.treeSet.add(studentInfo);
+           int sum = 0;
+           sum = (Integer.parseInt(list.get(1))+Integer.parseInt(list.get(2))+Integer.parseInt(list.get(3));
+           this.treeSet.add(new StudentInfo(list.get(0),sum));
        }
        inputStream.close();
 
