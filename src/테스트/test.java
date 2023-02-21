@@ -16,6 +16,9 @@ class test {
             }
         }
         Collections.sort(answer);
+        for(int i =0; i<answer.size(); i ++){
+            System.out.println(answer.get(i));
+        }
         int [] result = new int[commands.length];
         for(int i = 0; i< commands.length; i++){
             result[i] = answer.get(commands[i][2]-1);
