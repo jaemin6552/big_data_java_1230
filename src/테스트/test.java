@@ -1,36 +1,21 @@
 package 테스트;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
-class Box<T> {
-    private T ob;
-    public void set(T o) { ob = o; }
-    public T get() { return ob; }
-}
 
 class test {
-    public static <T>  boolean compBox(Box<? extends T> box, T con) {
-        T bc = box.get();
-        //box.set(con);
-        return bc.equals(con);
-    }
 
     public static void main(String[] args) {
-        Box<Integer> box1 = new Box<>();
-        box1.set(24);
-
-        Box<String> box2 = new Box<>();
-        box2.set("Poly");
-
-        if(compBox(box1, 25))
-            System.out.println("���� �ȿ� 25 ����");
-
-        if(compBox(box2, "Moly"))
-            System.out.println("���� �ȿ� Moly ����");
-
-        System.out.println(box1.get());
-        System.out.println(box2.get());
+        int []array = {1,5,2,6,3,7,4};
+        int [][]commands ={{2,5,3},{4,4,1},{1,7,3}};
+        int k = 0;
+        List<Integer> answer = new ArrayList<>();
+        for(int i =0; i<commands.length; i++){
+            for(int j =commands[i][0]; j<commands[i][1]; j++){
+                answer.add(array[j]);
+            }
+        }
+        Collections.sort(answer);
+        for(int i = 0; i<)
     }
 }
