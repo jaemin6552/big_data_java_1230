@@ -11,11 +11,15 @@ class test {
         int k = 0;
         List<Integer> answer = new ArrayList<>();
         for(int i =0; i<commands.length; i++){
-            for(int j =commands[i][0]; j<commands[i][1]; j++){
+            for(int j =commands[i][0]-1; j<commands[i][1]-1; j++){
                 answer.add(array[j]);
             }
         }
         Collections.sort(answer);
-        for(int i = 0; i<)
+        int [] result = new int[commands.length];
+        for(int i = 0; i< commands.length; i++){
+            result[i] = answer.get(commands[i][2]-1);
+        }
+        System.out.println(Arrays.toString(result));
     }
 }
